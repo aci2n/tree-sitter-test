@@ -1,3 +1,5 @@
+// -*- js-indent-level: 2; -*-
+
 module.exports = grammar({
   name: 'test',
 
@@ -6,20 +8,26 @@ module.exports = grammar({
     source_file: $ => repeat($._definition),
 
     _definition: $ => choice(
-      $.add,
-      $.sub,
-      $.mul,
-      $.div,
+      $.operation,
+      $.comment,
     ),
 
-    add: $ => seq('ADD', $.number),
+    comment: $ => /\/\/.*/,
 
-    sub: $ => seq('SUB', $.number),
+    operation: $ => seq(
+      $.operator,
+      $.operand,
+    ),
 
-    mul: $ => seq('MUL', $.number),
+    operator: $ => choice(
+      'ADD',
+      'SUB',
+      'MUL',
+      'DIV',
+    ),
 
-    div: $ => seq('DIV', $.number),
+    operand: $ => $._number,
 
-    number: $ => /[0-9]+/,
+    _number: $ => /[0-9]+/,
   }
 });

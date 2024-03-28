@@ -13,75 +13,57 @@
       "members": [
         {
           "type": "SYMBOL",
-          "name": "add"
+          "name": "operation"
         },
         {
           "type": "SYMBOL",
-          "name": "sub"
-        },
-        {
-          "type": "SYMBOL",
-          "name": "mul"
-        },
-        {
-          "type": "SYMBOL",
-          "name": "div"
+          "name": "comment"
         }
       ]
     },
-    "add": {
+    "comment": {
+      "type": "PATTERN",
+      "value": "\\/\\/.*"
+    },
+    "operation": {
       "type": "SEQ",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "operator"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "operand"
+        }
+      ]
+    },
+    "operator": {
+      "type": "CHOICE",
       "members": [
         {
           "type": "STRING",
           "value": "ADD"
         },
         {
-          "type": "SYMBOL",
-          "name": "number"
-        }
-      ]
-    },
-    "sub": {
-      "type": "SEQ",
-      "members": [
-        {
           "type": "STRING",
           "value": "SUB"
         },
-        {
-          "type": "SYMBOL",
-          "name": "number"
-        }
-      ]
-    },
-    "mul": {
-      "type": "SEQ",
-      "members": [
         {
           "type": "STRING",
           "value": "MUL"
         },
         {
-          "type": "SYMBOL",
-          "name": "number"
-        }
-      ]
-    },
-    "div": {
-      "type": "SEQ",
-      "members": [
-        {
           "type": "STRING",
           "value": "DIV"
-        },
-        {
-          "type": "SYMBOL",
-          "name": "number"
         }
       ]
     },
-    "number": {
+    "operand": {
+      "type": "SYMBOL",
+      "name": "_number"
+    },
+    "_number": {
       "type": "PATTERN",
       "value": "[0-9]+"
     }

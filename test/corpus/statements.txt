@@ -3,6 +3,7 @@ Operations
 ===
 
 ADD 23
+// a comment
 MUL 14
 DIV 2
 SUB 3
@@ -10,11 +11,16 @@ SUB 3
 ---
 
 (source_file
-      (add
-        (number))
-      (mul
-        (number))
-      (div
-        (number))
-      (sub
-        (number)))
+      (operation
+        (operator)
+	(operand))
+      (comment)
+      (operation
+        (operator)
+	(operand))
+      (operation
+        (operator)
+	(operand))
+      (operation
+        (operator)
+	(operand)))

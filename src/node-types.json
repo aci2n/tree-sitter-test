@@ -1,48 +1,32 @@
 [
   {
-    "type": "add",
+    "type": "operand",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "operation",
     "named": true,
     "fields": {},
     "children": {
-      "multiple": false,
+      "multiple": true,
       "required": true,
       "types": [
         {
-          "type": "number",
+          "type": "operand",
+          "named": true
+        },
+        {
+          "type": "operator",
           "named": true
         }
       ]
     }
   },
   {
-    "type": "div",
+    "type": "operator",
     "named": true,
-    "fields": {},
-    "children": {
-      "multiple": false,
-      "required": true,
-      "types": [
-        {
-          "type": "number",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
-    "type": "mul",
-    "named": true,
-    "fields": {},
-    "children": {
-      "multiple": false,
-      "required": true,
-      "types": [
-        {
-          "type": "number",
-          "named": true
-        }
-      ]
-    }
+    "fields": {}
   },
   {
     "type": "source_file",
@@ -53,34 +37,11 @@
       "required": false,
       "types": [
         {
-          "type": "add",
+          "type": "comment",
           "named": true
         },
         {
-          "type": "div",
-          "named": true
-        },
-        {
-          "type": "mul",
-          "named": true
-        },
-        {
-          "type": "sub",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
-    "type": "sub",
-    "named": true,
-    "fields": {},
-    "children": {
-      "multiple": false,
-      "required": true,
-      "types": [
-        {
-          "type": "number",
+          "type": "operation",
           "named": true
         }
       ]
@@ -103,7 +64,7 @@
     "named": false
   },
   {
-    "type": "number",
+    "type": "comment",
     "named": true
   }
 ]
