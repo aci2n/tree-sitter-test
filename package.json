@@ -19,7 +19,8 @@
   "scripts": {
     "install": "node-gyp-build",
     "prebuildify": "prebuildify --napi --strip",
-    "generate": "tree-sitter generate --no-bindings"
+    "generate": "tree-sitter generate --no-bindings",
+    "test": "tree-sitter test"
   },
   "types": "bindings/node",
   "files": [

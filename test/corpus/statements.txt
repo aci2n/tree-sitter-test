@@ -1,0 +1,20 @@
+===
+Hello
+===
+
+ADD 23
+MUL 14
+DIV 2
+SUB 3
+
+---
+
+(source_file
+      (add
+        (number))
+      (mul
+        (number))
+      (div
+        (number))
+      (sub
+        (number)))
