@@ -1,4 +1,5 @@
 {
+  "name": "tree-sitter-vue",
   "dependencies": {
     "node-addon-api": "^7.1.0",
     "node-gyp-build": "^4.8.0"
@@ -17,7 +18,8 @@
   },
   "scripts": {
     "install": "node-gyp-build",
-    "prebuildify": "prebuildify --napi --strip"
+    "prebuildify": "prebuildify --napi --strip",
+    "generate": "tree-sitter generate --no-bindings"
   },
   "types": "bindings/node",
   "files": [
@@ -29,5 +31,8 @@
     "src/**"
   ],
   "tree-sitter": [{
+    "language-name": "vue",
+    "file-types": ["vue"],
+    "scope": "source.vue"
   }]
 }
