@@ -1,5 +1,5 @@
 {
-  "name": "tree-sitter-vue",
+  "name": "tree-sitter-test",
   "dependencies": {
     "node-addon-api": "^7.1.0",
     "node-gyp-build": "^4.8.0"
@@ -32,8 +32,8 @@
     "src/**"
   ],
   "tree-sitter": [{
-    "language-name": "vue",
-    "file-types": ["vue"],
-    "scope": "source.vue"
+    "language-name": "test",
+    "file-types": ["test"],
+    "scope": "source.test"
   }]
 }

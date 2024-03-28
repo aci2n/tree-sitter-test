@@ -1,5 +1,5 @@
 module.exports = grammar({
-  name: 'vue',
+  name: 'test',
 
   rules: {
     // TODO: add the actual grammar rules
